@@ -1,3 +1,26 @@
+# WP Event Manager Online Registration
+
+It it an extension to original wordpress plugin wp-event-manager.
+
+It has been built as enhancement of original plugin and most of its code is exactly the same as in source plugin.
+
+To work it needs manually added table in DB.
+
+Below you can find query which will create properly structured table in your DB.
+
+CREATE TABLE `wp_event_members` (
+  `EventId` bigint(20) unsigned NOT NULL,
+  `EventMember` bigint(20) unsigned NOT NULL,
+  `DateOfRegister` date NOT NULL,
+  KEY `EventId` (`EventId`),
+  KEY `EventMember` (`EventMember`),
+  CONSTRAINT `wp_event_members_ibfk_1` FOREIGN KEY (`EventId`) REFERENCES `wp_posts` (`ID`),
+  CONSTRAINT `wp_event_members_ibfk_2` FOREIGN KEY (`EventMember`) REFERENCES `wp_users` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# Source Plugin README 
+
 === WP Event Manager ===
 
 Contributors: wpeventmanager,ashokdudhat,hiteshmakvana,sapnamd,priyagoenka,kishankothari,krinay
