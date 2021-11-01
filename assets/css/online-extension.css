@@ -1,0 +1,70 @@
+/* It is stylesheet for extension of plugin */
+
+/* Begin users list at event page */
+.entry-content ul.users,
+ul.users {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.users__item {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.users a.users__link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 8px;
+	background-color: transparent;
+	overflow: hidden;
+	transition: background-color 0.3s ease-in-out;
+	padding: 0.5rem;
+}
+
+.users a.users__link:hover,
+.users a.users__link:focus {
+	transition: background-color 0.3s ease-in-out;
+	background-color: rgba(100, 100, 100, 0.05);
+	color: #555;
+}
+
+.users__linkText {
+}
+
+.users__link img {
+	margin-right: 0.5rem;
+	border-radius: 50%;
+}
+
+/* End users list at event page */
+
+/* Begin user registration button */
+.wpem-registration-event-button .eventRegistration__button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.5rem;
+	background-color: rgba(100, 100, 100, 0.05);
+	border-radius: 0.5rem;
+	color: #555;
+	transition: background-color 0.3s ease-in-out;
+}
+.wpem-registration-event-button .eventRegistration__button:hover,
+.wpem-registration-event-button .eventRegistration__button:focus {
+	background-color: rgba(100, 100, 100, 0.1);
+	color: #555;
+}
+
+.wpem-registration-event-button .eventRegistration__icon {
+	margin-right: 0.5rem;
+	padding-top: 0.05rem;
+}
+
+.wpem-registration-event-button .eventRegistration__text {
+}
+
+/* End user registration button */

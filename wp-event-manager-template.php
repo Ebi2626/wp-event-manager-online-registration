@@ -246,7 +246,13 @@ function get_event_registration_method( $post = null ) {
 	$method = new stdClass();
 	$register  = $post->_registration;
 
+	// Customization
 	if ( empty( $register ) ) {
+		$method->type ='online';
+		return apply_filters( 'get_event_registration_method', $method, $post );
+	}
+
+	if ( strstr( $register, 'http')){
 		$method->type ='url';
 		return apply_filters( 'get_event_registration_method', $method, $post );
 	}
